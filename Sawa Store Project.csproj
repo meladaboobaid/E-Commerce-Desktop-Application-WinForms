@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAE44E3E-25FC-4218-B606-BE2AEAE6FC22}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sawa_Store_Project</RootNamespace>
+    <AssemblyName>Sawa Store Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\WinFormsUIs\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.Desktop.UI %281%29">
+      <HintPath>D:\WinFormsUIs\Siticone.Desktop.UI (1).dll</HintPath>
+    </Reference>
+    <Reference Include="SiticoneNetFrameworkUI %281%29">
+      <HintPath>D:\WinFormsUIs\SiticoneNetFrameworkUI (1).dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Screens\frmAddEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Screens\frmAddEditProduct.Designer.cs">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductDetails.Designer.cs">
+      <DependentUpon>frmProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\clsGlobal.cs" />
+    <Compile Include="Global\clsValidation.cs" />
+    <Compile Include="Controls\ctrlCartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlCartItem.Designer.cs">
+      <DependentUpon>ctrlCartItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlOrderSummery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlOrderSummery.Designer.cs">
+      <DependentUpon>ctrlOrderSummery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlProduct.Designer.cs">
+      <DependentUpon>ctrlProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Screens\frmRelatedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Screens\frmRelatedProduct.Designer.cs">
+      <DependentUpon>frmRelatedProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Screens\frmShippingInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Screens\frmShippingInfo.Designer.cs">
+      <DependentUpon>frmShippingInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Screens\frmShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Screens\frmShoppingCart.Designer.cs">
+      <DependentUpon>frmShoppingCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Screens\frmViewProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Screens\frmViewProductDetails.Designer.cs">
+      <DependentUpon>frmViewProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Screens\frmAddEditCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Screens\frmAddEditCustomers.Designer.cs">
+      <DependentUpon>frmAddEditCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_Interfaces\Controls\ctrlUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users_Interfaces\Controls\ctrlUserInfo.Designer.cs">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_Interfaces\frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_Interfaces\frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Screens\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Screens\frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users_Interfaces\frmViewUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users_Interfaces\frmViewUserInfo.Designer.cs">
+      <DependentUpon>frmViewUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Screens\frmClientView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client_Screens\frmClientView.Designer.cs">
+      <DependentUpon>frmClientView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ctrlCartItem.resx">
+      <DependentUpon>ctrlCartItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlOrderSummery.resx">
+      <DependentUpon>ctrlOrderSummery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlProduct.resx">
+      <DependentUpon>ctrlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Screens\frmRelatedProduct.resx">
+      <DependentUpon>frmRelatedProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Screens\frmShippingInfo.resx">
+      <DependentUpon>frmShippingInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Screens\frmShoppingCart.resx">
+      <DependentUpon>frmShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Screens\frmViewProductDetails.resx">
+      <DependentUpon>frmViewProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Screens\frmAddEditCustomers.resx">
+      <DependentUpon>frmAddEditCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Screens\frmAddEditProduct.resx">
+      <DependentUpon>frmAddEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductDetails.resx">
+      <DependentUpon>frmProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_Interfaces\Controls\ctrlUserInfo.resx">
+      <DependentUpon>ctrlUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_Interfaces\frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Screens\frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users_Interfaces\frmViewUserInfo.resx">
+      <DependentUpon>frmViewUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Screens\frmClientView.resx">
+      <DependentUpon>frmClientView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-02-11 201354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 11, 2026, 08_22_56 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 11, 2026, 08_31_25 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 11, 2026, 08_37_12 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21518bffab32ab139a46349110ed4417.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-closed-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-magazine-25 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-application-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\.trashed-1764256069-IMG_20251028_180651.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop-75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25aa146b5dcee6ca3f8bdf51c1b75ebc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 16, 2026, 12_46_13 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 16, 2026, 12_49_38 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f3fadba1aadc42d0dac4af806e11c251.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc6f554512a6a473002c93dd4da334b0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2414e0d209394565244ccffd1b08017.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-electronics-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fashion-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lipstick-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cart-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\95e9eb8faa14dbe53e2a2675b07e890f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6cd8155d833a45fd4b77990921567d26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cart-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2414e0d209394565244ccffd1b080171.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-payment-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\97e2fa87720389edc7905e0cb3ac3112.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8e6c9e216d3295645aab32d5a2b94ece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-categories-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-status-25 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedule-25 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shipping-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pen-25 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-students-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-compression-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f543bf5d7c3a3406ec63c67ee565ccc0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manage-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc6f554512a6a473002c93dd4da334b01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manage-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-driver-license-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-local-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SawaStore_BusinessLayer\SawaStore_BusinessLayer.csproj">
+      <Project>{77bce824-975b-4f81-a4db-5c97e8c62b9b}</Project>
+      <Name>SawaStore_BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Feb 16, 2026, 12_49_38 PM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64713cc43391a19a6925bca3c131e5e5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1729974858821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90fc864285261468ec839a2d49fbfc93.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8e6c9e216d3295645aab32d5a2b94ece1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-product-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-description-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-price-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-image-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-upload-100 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shop-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-e-learning-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Mar 9, 2026, 07_14_53 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

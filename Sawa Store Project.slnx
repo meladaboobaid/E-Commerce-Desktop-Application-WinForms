@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Sawa Store Project.csproj" Id="fae44e3e-25fc-4218-b606-be2aeae6fc22" />
+  <Project Path="SawaStore_BusinessLayer/SawaStore_BusinessLayer.csproj" Id="77bce824-975b-4f81-a4db-5c97e8c62b9b" />
+  <Project Path="SawaStore_DataAccessLayer/SawaStore_DataAccessLayer.csproj" Id="490c44f7-4d53-4126-9538-9af346ab8acb" />
+</Solution>
