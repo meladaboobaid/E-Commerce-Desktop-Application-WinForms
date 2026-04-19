@@ -35,6 +35,3 @@
 2. Run the provided database script (with sample data).
 3. Update connection string in `App.config`.
 4. Build and run the solution.
-
-
-**Sawa Store** is a desktop WinForms demo project that simulates core e-commerce/admin operations to practice software development concepts.
